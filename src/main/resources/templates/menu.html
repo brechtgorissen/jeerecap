@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en"
+xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+    <link rel="stylesheet" th:href="@{/CSS/main.css}">
+</head>
+<body>
+    <nav th:fragment="navigation">
+        <ul>
+            <li>
+                <a th:href="@{~/index}">3dehands.be</a>
+            </li>
+            <li>
+                <a th:href="@{~/new}">Add New Product</a>
+            </li>
+            <li>
+                <a th:href="@{~/about}">About</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+<footer th:fragment="footer">
+    &copy;2018, 3dehands.be
+</footer>
+</html>

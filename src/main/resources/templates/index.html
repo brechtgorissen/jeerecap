@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/CSS/main.css}">
+
+</head>
+<body>
+    <div th:replace="~{menu::navigation}"></div>
+    <div><h1>Home Menu</h1></div>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Asking Price</th>
+                <th>More Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="Product : ${all}">
+                <td th:text="${Product.productName}"></td>
+                <td th:text="${Product.askingPrice}"></td>
+                <td><a class="button" th:href="@{/details/{id}(id = ${Product.id})}">Show Details</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+<div th:replace="~{menu::footer}"></div>
+</html>

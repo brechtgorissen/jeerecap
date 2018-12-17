@@ -1,0 +1,11 @@
+nav ul li{
+    display: inline-block;
+}
+
+.error{
+    color: red;
+}
+
+footer{
+    text-align: center;
+}

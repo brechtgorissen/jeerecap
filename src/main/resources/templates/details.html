@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+    <link rel="stylesheet" th:href="@{/CSS/main.css}">
+
+</head>
+<body>
+    <div th:replace="~{menu::navigation}"></div>
+    <div><h1>Product Details</h1></div>
+    <table>
+        <tr>
+            <td>Product Name</td>
+            <td th:text="${product.productName}"></td>
+        </tr>
+        <tr>
+            <td>Product Description</td>
+            <td th:text="${product.productDescription}"></td>
+        </tr>
+        <tr>
+            <td>Asking Price</td>
+            <td th:text="${product.askingPrice}"></td>
+        </tr>
+        <tr>
+            <td>Contact Email</td>
+            <td th:text="${product.contactEmail}"></td>
+        </tr>
+    </table>
+</body>
+<div th:replace="~{menu::footer}"></div>
+</html>
